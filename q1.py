@@ -6,14 +6,15 @@ def calcular_media(lista):
     for  nota in lista:
         soma+=nota
     med=soma/4
-    if med<0 or med>10:
-        return(f"Tem alguma coisa errada. Média: {med}")
-    elif med>=7:
-        return(f"Aprovado. Média: {med}")
-    elif med<7:
-        return(f"Reprovado. Média: {med}")
+    return med
 notas=[]
 for x in range(1,5):
     nota=int(input(f"Digite a {x}º nota: "))
     notas.append(nota)
-print(calcular_media(notas))
+
+media= calcular_media(notas)
+
+if media>=7:
+    print(f"Aprovado. Média: {media}")
+elif media<7:
+    print(f"Reprovado. Média: {media}")
